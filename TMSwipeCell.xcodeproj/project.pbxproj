@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		614A7A5B20EC79FA007C5ADA /* TMSwipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A7A5A20EC79FA007C5ADA /* TMSwipeCell.m */; };
+		614A7A5F20EC9DFA007C5ADA /* TMSwipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A7A5E20EC9DFA007C5ADA /* TMSwipeCell.m */; };
 		61FDD86720EB9768004BADF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD86620EB9768004BADF5 /* AppDelegate.m */; };
 		61FDD86A20EB9768004BADF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD86920EB9768004BADF5 /* ViewController.m */; };
 		61FDD86D20EB9768004BADF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FDD86B20EB9768004BADF5 /* Main.storyboard */; };
@@ -40,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		614A7A5920EC79FA007C5ADA /* TMSwipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSwipeCell.h; sourceTree = "<group>"; };
-		614A7A5A20EC79FA007C5ADA /* TMSwipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSwipeCell.m; sourceTree = "<group>"; };
+		614A7A5D20EC9DFA007C5ADA /* TMSwipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSwipeCell.h; sourceTree = "<group>"; };
+		614A7A5E20EC9DFA007C5ADA /* TMSwipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSwipeCell.m; sourceTree = "<group>"; };
 		61FDD86220EB9768004BADF5 /* TMSwipeCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMSwipeCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FDD86520EB9768004BADF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61FDD86620EB9768004BADF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,11 +92,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		614A7A5820EC79FA007C5ADA /* SwipeCell */ = {
+		614A7A5C20EC9DFA007C5ADA /* SwipeCell */ = {
 			isa = PBXGroup;
 			children = (
-				614A7A5920EC79FA007C5ADA /* TMSwipeCell.h */,
-				614A7A5A20EC79FA007C5ADA /* TMSwipeCell.m */,
+				614A7A5D20EC9DFA007C5ADA /* TMSwipeCell.h */,
+				614A7A5E20EC9DFA007C5ADA /* TMSwipeCell.m */,
 			);
 			path = SwipeCell;
 			sourceTree = "<group>";
@@ -104,6 +104,7 @@
 		61FDD85920EB9768004BADF5 = {
 			isa = PBXGroup;
 			children = (
+				614A7A5C20EC9DFA007C5ADA /* SwipeCell */,
 				61FDD86420EB9768004BADF5 /* TMSwipeCell */,
 				61FDD87D20EB976A004BADF5 /* TMSwipeCellTests */,
 				61FDD88820EB976A004BADF5 /* TMSwipeCellUITests */,
@@ -124,7 +125,6 @@
 		61FDD86420EB9768004BADF5 /* TMSwipeCell */ = {
 			isa = PBXGroup;
 			children = (
-				614A7A5820EC79FA007C5ADA /* SwipeCell */,
 				61FDD8A720EBA267004BADF5 /* gif */,
 				61FDD86520EB9768004BADF5 /* AppDelegate.h */,
 				61FDD86620EB9768004BADF5 /* AppDelegate.m */,
@@ -307,7 +307,7 @@
 				61FDD8A620EB9A9C004BADF5 /* TestViewController.m in Sources */,
 				61FDD89D20EB98E4004BADF5 /* TableViewCellType1.m in Sources */,
 				61FDD87520EB976A004BADF5 /* main.m in Sources */,
-				614A7A5B20EC79FA007C5ADA /* TMSwipeCell.m in Sources */,
+				614A7A5F20EC9DFA007C5ADA /* TMSwipeCell.m in Sources */,
 				61FDD86720EB9768004BADF5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
