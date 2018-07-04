@@ -262,19 +262,21 @@ typedef NS_ENUM(NSInteger, TMSwipeCellState) {
     }
     
     self.state = TMSwipeCellStateAnimating;
+    __weak __typeof(&*self)weakSelf = self;
     [UIView animateWithDuration:(animate?0.2:0) delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         [self setContentViewX:0];
     } completion:^(BOOL finished) {
-        [_btnContainView removeFromSuperview];
-        _btnContainView = nil;
+        [weakSelf.btnContainView removeFromSuperview];
+        weakSelf.btnContainView = nil;
         self.state = TMSwipeCellStateNormal;
     }];
 }
 
 - (void)showSideslip {
     self.state = TMSwipeCellStateAnimating;
+    __weak __typeof(&*self)weakSelf = self;
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        [self setContentViewX:-_btnContainView.frame.size.width];
+        [self setContentViewX:-weakSelf.btnContainView.frame.size.width];
     } completion:^(BOOL finished) {
         self.state = TMSwipeCellStateOpen;
     }];

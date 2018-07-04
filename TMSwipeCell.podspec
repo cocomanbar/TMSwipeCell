@@ -77,7 +77,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/TMSwipeCell.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/cocomanbar/TMSwipeCell.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -88,7 +88,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "TMSwipeCell", "TMSwipeCell/TMSwipeCell/SwipeCell/*.{h,m}"
+  s.source_files  = "TMSwipeCell", "TMSwipeCell/SwipeCell/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

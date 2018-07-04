@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		614A7A5B20EC79FA007C5ADA /* TMSwipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A7A5A20EC79FA007C5ADA /* TMSwipeCell.m */; };
 		61FDD86720EB9768004BADF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD86620EB9768004BADF5 /* AppDelegate.m */; };
 		61FDD86A20EB9768004BADF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD86920EB9768004BADF5 /* ViewController.m */; };
 		61FDD86D20EB9768004BADF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FDD86B20EB9768004BADF5 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		61FDD87520EB976A004BADF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD87420EB976A004BADF5 /* main.m */; };
 		61FDD87F20EB976A004BADF5 /* TMSwipeCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD87E20EB976A004BADF5 /* TMSwipeCellTests.m */; };
 		61FDD88A20EB976A004BADF5 /* TMSwipeCellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD88920EB976A004BADF5 /* TMSwipeCellUITests.m */; };
-		61FDD89A20EB985C004BADF5 /* TMSwipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD89820EB985C004BADF5 /* TMSwipeCell.m */; };
 		61FDD89D20EB98E4004BADF5 /* TableViewCellType1.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD89C20EB98E4004BADF5 /* TableViewCellType1.m */; };
 		61FDD8A020EB98FF004BADF5 /* TableViewCellType2.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD89F20EB98FF004BADF5 /* TableViewCellType2.m */; };
 		61FDD8A620EB9A9C004BADF5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD8A520EB9A9C004BADF5 /* TestViewController.m */; };
@@ -40,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		614A7A5920EC79FA007C5ADA /* TMSwipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSwipeCell.h; sourceTree = "<group>"; };
+		614A7A5A20EC79FA007C5ADA /* TMSwipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSwipeCell.m; sourceTree = "<group>"; };
 		61FDD86220EB9768004BADF5 /* TMSwipeCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMSwipeCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FDD86520EB9768004BADF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61FDD86620EB9768004BADF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,8 +58,6 @@
 		61FDD88520EB976A004BADF5 /* TMSwipeCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMSwipeCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FDD88920EB976A004BADF5 /* TMSwipeCellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMSwipeCellUITests.m; sourceTree = "<group>"; };
 		61FDD88B20EB976A004BADF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61FDD89820EB985C004BADF5 /* TMSwipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSwipeCell.m; sourceTree = "<group>"; };
-		61FDD89920EB985C004BADF5 /* TMSwipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSwipeCell.h; sourceTree = "<group>"; };
 		61FDD89B20EB98E4004BADF5 /* TableViewCellType1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCellType1.h; sourceTree = "<group>"; };
 		61FDD89C20EB98E4004BADF5 /* TableViewCellType1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCellType1.m; sourceTree = "<group>"; };
 		61FDD89E20EB98FF004BADF5 /* TableViewCellType2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCellType2.h; sourceTree = "<group>"; };
@@ -92,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		614A7A5820EC79FA007C5ADA /* SwipeCell */ = {
+			isa = PBXGroup;
+			children = (
+				614A7A5920EC79FA007C5ADA /* TMSwipeCell.h */,
+				614A7A5A20EC79FA007C5ADA /* TMSwipeCell.m */,
+			);
+			path = SwipeCell;
+			sourceTree = "<group>";
+		};
 		61FDD85920EB9768004BADF5 = {
 			isa = PBXGroup;
 			children = (
@@ -115,8 +124,8 @@
 		61FDD86420EB9768004BADF5 /* TMSwipeCell */ = {
 			isa = PBXGroup;
 			children = (
+				614A7A5820EC79FA007C5ADA /* SwipeCell */,
 				61FDD8A720EBA267004BADF5 /* gif */,
-				61FDD89720EB983A004BADF5 /* TMSwipeCell */,
 				61FDD86520EB9768004BADF5 /* AppDelegate.h */,
 				61FDD86620EB9768004BADF5 /* AppDelegate.m */,
 				61FDD86820EB9768004BADF5 /* ViewController.h */,
@@ -152,15 +161,6 @@
 				61FDD88B20EB976A004BADF5 /* Info.plist */,
 			);
 			path = TMSwipeCellUITests;
-			sourceTree = "<group>";
-		};
-		61FDD89720EB983A004BADF5 /* TMSwipeCell */ = {
-			isa = PBXGroup;
-			children = (
-				61FDD89920EB985C004BADF5 /* TMSwipeCell.h */,
-				61FDD89820EB985C004BADF5 /* TMSwipeCell.m */,
-			);
-			path = TMSwipeCell;
 			sourceTree = "<group>";
 		};
 		61FDD8A720EBA267004BADF5 /* gif */ = {
@@ -305,9 +305,9 @@
 				61FDD8A020EB98FF004BADF5 /* TableViewCellType2.m in Sources */,
 				61FDD86A20EB9768004BADF5 /* ViewController.m in Sources */,
 				61FDD8A620EB9A9C004BADF5 /* TestViewController.m in Sources */,
-				61FDD89A20EB985C004BADF5 /* TMSwipeCell.m in Sources */,
 				61FDD89D20EB98E4004BADF5 /* TableViewCellType1.m in Sources */,
 				61FDD87520EB976A004BADF5 /* main.m in Sources */,
+				614A7A5B20EC79FA007C5ADA /* TMSwipeCell.m in Sources */,
 				61FDD86720EB9768004BADF5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
