@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		614A7A5F20EC9DFA007C5ADA /* TMSwipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A7A5E20EC9DFA007C5ADA /* TMSwipeCell.m */; };
+		61E7C34120EFDC1D0022E2AB /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E7C34020EFDC1D0022E2AB /* TestTableViewCell.m */; };
+		61E7C34420EFDE880022E2AB /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E7C34320EFDE880022E2AB /* TestModel.m */; };
+		61E7C34620EFF2670022E2AB /* one.gif in Resources */ = {isa = PBXBuildFile; fileRef = 61E7C34520EFF2660022E2AB /* one.gif */; };
 		61FDD86720EB9768004BADF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD86620EB9768004BADF5 /* AppDelegate.m */; };
 		61FDD86A20EB9768004BADF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD86920EB9768004BADF5 /* ViewController.m */; };
 		61FDD86D20EB9768004BADF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FDD86B20EB9768004BADF5 /* Main.storyboard */; };
@@ -16,10 +19,7 @@
 		61FDD87520EB976A004BADF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD87420EB976A004BADF5 /* main.m */; };
 		61FDD87F20EB976A004BADF5 /* TMSwipeCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD87E20EB976A004BADF5 /* TMSwipeCellTests.m */; };
 		61FDD88A20EB976A004BADF5 /* TMSwipeCellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD88920EB976A004BADF5 /* TMSwipeCellUITests.m */; };
-		61FDD89D20EB98E4004BADF5 /* TableViewCellType1.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD89C20EB98E4004BADF5 /* TableViewCellType1.m */; };
-		61FDD8A020EB98FF004BADF5 /* TableViewCellType2.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD89F20EB98FF004BADF5 /* TableViewCellType2.m */; };
 		61FDD8A620EB9A9C004BADF5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD8A520EB9A9C004BADF5 /* TestViewController.m */; };
-		61FDD8A920EBA270004BADF5 /* one.gif in Resources */ = {isa = PBXBuildFile; fileRef = 61FDD8A820EBA270004BADF5 /* one.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,11 @@
 /* Begin PBXFileReference section */
 		614A7A5D20EC9DFA007C5ADA /* TMSwipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSwipeCell.h; sourceTree = "<group>"; };
 		614A7A5E20EC9DFA007C5ADA /* TMSwipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSwipeCell.m; sourceTree = "<group>"; };
+		61E7C33F20EFDC1D0022E2AB /* TestTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
+		61E7C34020EFDC1D0022E2AB /* TestTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
+		61E7C34220EFDE880022E2AB /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		61E7C34320EFDE880022E2AB /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		61E7C34520EFF2660022E2AB /* one.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = one.gif; sourceTree = "<group>"; };
 		61FDD86220EB9768004BADF5 /* TMSwipeCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMSwipeCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FDD86520EB9768004BADF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61FDD86620EB9768004BADF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,13 +63,8 @@
 		61FDD88520EB976A004BADF5 /* TMSwipeCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMSwipeCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FDD88920EB976A004BADF5 /* TMSwipeCellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMSwipeCellUITests.m; sourceTree = "<group>"; };
 		61FDD88B20EB976A004BADF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61FDD89B20EB98E4004BADF5 /* TableViewCellType1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCellType1.h; sourceTree = "<group>"; };
-		61FDD89C20EB98E4004BADF5 /* TableViewCellType1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCellType1.m; sourceTree = "<group>"; };
-		61FDD89E20EB98FF004BADF5 /* TableViewCellType2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCellType2.h; sourceTree = "<group>"; };
-		61FDD89F20EB98FF004BADF5 /* TableViewCellType2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCellType2.m; sourceTree = "<group>"; };
 		61FDD8A420EB9A9C004BADF5 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		61FDD8A520EB9A9C004BADF5 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		61FDD8A820EBA270004BADF5 /* one.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = one.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,10 +132,10 @@
 				61FDD86920EB9768004BADF5 /* ViewController.m */,
 				61FDD8A420EB9A9C004BADF5 /* TestViewController.h */,
 				61FDD8A520EB9A9C004BADF5 /* TestViewController.m */,
-				61FDD89B20EB98E4004BADF5 /* TableViewCellType1.h */,
-				61FDD89C20EB98E4004BADF5 /* TableViewCellType1.m */,
-				61FDD89E20EB98FF004BADF5 /* TableViewCellType2.h */,
-				61FDD89F20EB98FF004BADF5 /* TableViewCellType2.m */,
+				61E7C34220EFDE880022E2AB /* TestModel.h */,
+				61E7C34320EFDE880022E2AB /* TestModel.m */,
+				61E7C33F20EFDC1D0022E2AB /* TestTableViewCell.h */,
+				61E7C34020EFDC1D0022E2AB /* TestTableViewCell.m */,
 				61FDD86B20EB9768004BADF5 /* Main.storyboard */,
 				61FDD86E20EB976A004BADF5 /* Assets.xcassets */,
 				61FDD87020EB976A004BADF5 /* LaunchScreen.storyboard */,
@@ -166,7 +166,7 @@
 		61FDD8A720EBA267004BADF5 /* gif */ = {
 			isa = PBXGroup;
 			children = (
-				61FDD8A820EBA270004BADF5 /* one.gif */,
+				61E7C34520EFF2660022E2AB /* one.gif */,
 			);
 			path = gif;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61FDD87220EB976A004BADF5 /* LaunchScreen.storyboard in Resources */,
-				61FDD8A920EBA270004BADF5 /* one.gif in Resources */,
+				61E7C34620EFF2670022E2AB /* one.gif in Resources */,
 				61FDD86F20EB976A004BADF5 /* Assets.xcassets in Resources */,
 				61FDD86D20EB9768004BADF5 /* Main.storyboard in Resources */,
 			);
@@ -302,12 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61FDD8A020EB98FF004BADF5 /* TableViewCellType2.m in Sources */,
+				61E7C34120EFDC1D0022E2AB /* TestTableViewCell.m in Sources */,
 				61FDD86A20EB9768004BADF5 /* ViewController.m in Sources */,
 				61FDD8A620EB9A9C004BADF5 /* TestViewController.m in Sources */,
-				61FDD89D20EB98E4004BADF5 /* TableViewCellType1.m in Sources */,
 				61FDD87520EB976A004BADF5 /* main.m in Sources */,
 				614A7A5F20EC9DFA007C5ADA /* TMSwipeCell.m in Sources */,
+				61E7C34420EFDE880022E2AB /* TestModel.m in Sources */,
 				61FDD86720EB9768004BADF5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
