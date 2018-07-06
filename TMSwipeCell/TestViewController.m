@@ -7,11 +7,13 @@
 //
 
 #import "TestViewController.h"
-#import "TableViewCellType1.h"
-#import "TableViewCellType2.h"
+#import "TestTableViewCell.h"
+
 
 @interface TestViewController ()
 <TMSwipeCellDelegate>
+
+@property (nonatomic, strong)NSMutableArray *datas;
 
 @end
 
@@ -21,7 +23,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.tableView registerClass:[TableViewCellType1 class] forCellReuseIdentifier:@"TableViewCellType1"];
+    _datas = [NSMutableArray arrayWithArray:[TestModel getAllDatas]];
+    [self.tableView reloadData];
 }
 
 /**
@@ -57,96 +60,78 @@
  */
 - (nullable NSArray<TMSwipeCellAction *> *)swipeCell:(TMSwipeCell *)swipeCell editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    /* 方便组合测试，建议不要这么做.. */
-    TMSwipeCellAction *action1 = [TMSwipeCellAction rowActionWithStyle:TMSwipeCellActionStyleNormal title:@"取消关注" handler:^(TMSwipeCellAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        NSLog(@"取消关注");
-    }];
-    TMSwipeCellAction *action2 = [TMSwipeCellAction rowActionWithStyle:TMSwipeCellActionStyleDestructive title:@"删除" handler:^(TMSwipeCellAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        NSLog(@"删除");
-    }];
-    
-    TMSwipeCellAction *tagAction = [TMSwipeCellAction rowActionWithStyle:TMSwipeCellActionStyleNormal title:nil handler:^(TMSwipeCellAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        NSLog(@"点击的打标签按钮");
-    }];
-    tagAction.backgroundColor = [UIColor clearColor];
-    tagAction.image = [UIImage imageNamed:@"Tag"];
-    
-    TMSwipeCellAction *deleteAction = [TMSwipeCellAction rowActionWithStyle:TMSwipeCellActionStyleNormal title:nil handler:^(TMSwipeCellAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        NSLog(@"点击的删除按钮");
-    }];
-    deleteAction.backgroundColor = [UIColor clearColor];
-    deleteAction.image = [UIImage imageNamed:@"Delete"];
-    
-    if (indexPath.section == 0) {
-        if (indexPath.row % 2 == 0) {
-            return @[action2];
-        }else{
-            return @[action1,action2];
-        }
+    TestModel *model = [_datas objectAtIndex:indexPath.row];
+    __weak __typeof(&*self)weakSelf = self;
+    if ([model.message_id isEqualToString:TMSWIPE_FRIEND]) {
+        
+        TMSwipeCellAction *action3 = [TMSwipeCellAction rowActionWithStyle:TMSwipeCellActionStyleNormal title:@"备注" handler:^(TMSwipeCellAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+            NSLog(@"备注");
+        }];
+        TMSwipeCellAction *action2 = [TMSwipeCellAction rowActionWithStyle:TMSwipeCellActionStyleDestructive title:@"删除" handler:^(TMSwipeCellAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+            NSLog(@"删除");
+            [weakSelf.datas removeObject:model];
+            [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+        }];
+        return @[action3, action2];
+        
+    }else if ([model.message_id isEqualToString:TMSWIPE_OTHERS]){
+        
+        TMSwipeCellAction *tagAction = [TMSwipeCellAction rowActionWithStyle:TMSwipeCellActionStyleNormal title:nil handler:^(TMSwipeCellAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+            NSLog(@"点击的打标签按钮");
+        }];
+        tagAction.backgroundColor = [UIColor lightGrayColor];
+        tagAction.image = [UIImage imageNamed:@"Tag"];
+        
+        TMSwipeCellAction *deleteAction = [TMSwipeCellAction rowActionWithStyle:TMSwipeCellActionStyleNormal title:nil handler:^(TMSwipeCellAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+            NSLog(@"点击的删除按钮");
+            [weakSelf.datas removeObject:model];
+            [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+        }];
+        deleteAction.backgroundColor = [UIColor lightGrayColor];
+        deleteAction.image = [UIImage imageNamed:@"Delete"];
+        return @[tagAction, deleteAction];
+        
+    }else if ([model.message_id isEqualToString:TMSWIPE_PUBLIC]){
+        
+        TMSwipeCellAction *action1 = [TMSwipeCellAction rowActionWithStyle:TMSwipeCellActionStyleNormal title:@"取消关注" handler:^(TMSwipeCellAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+            NSLog(@"取消关注");
+        }];
+        TMSwipeCellAction *action2 = [TMSwipeCellAction rowActionWithStyle:TMSwipeCellActionStyleDestructive title:@"删除" handler:^(TMSwipeCellAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+            NSLog(@"删除");
+            [weakSelf.datas removeObject:model];
+            [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+        }];
+        return @[action1, action2];
+        
     }else{
-        if (indexPath.row % 2 == 0) {
-            if (indexPath.row > 2) {
-                deleteAction.animationStyle = TMSwipeCellActionAnimationStyleAnimation;
-                deleteAction.confirmIcon = @"Delete";
-                return @[tagAction, deleteAction];
-            }else{
-                return @[tagAction, deleteAction];
-            }
-        }else{
-            return @[action1, deleteAction];
-        }
+        return @[];
     }
 }
 
 #pragma mark - tableViewDelegate
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 2;
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _datas.count;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 5;
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [TestTableViewCell rowHeight];
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 80;
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TestModel *model = [_datas objectAtIndex:indexPath.row];
+    TestTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TestTableViewCell"];
+    cell.imageV.image = [UIImage imageNamed:model.headUrl];
+    cell.nameL.text = model.name;
+    cell.contentL.text = model.content;
+    cell.timeL.text = model.time;
+    cell.delegate = self;
+    return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 10;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 0.1;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0)
-    {
-        TableViewCellType1 *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCellType1"];
-        cell.delegate = self;
-        cell.contentView.backgroundColor = [UIColor orangeColor];
-        return cell;
-    }
-    else
-    {
-        TableViewCellType2 *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCellType2"];
-        cell.delegate = self;
-        cell.contentView.backgroundColor = [UIColor lightGrayColor];
-        return cell;
-    }
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
