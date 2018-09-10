@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#pragma mark -
-
 typedef NS_ENUM(NSInteger, TMSwipeCellActionStyle) {
     TMSwipeCellActionStyleDefault = 0,
     TMSwipeCellActionStyleDestructive = TMSwipeCellActionStyleDefault,  // 删除 红底
