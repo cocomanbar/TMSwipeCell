@@ -10,6 +10,12 @@
 		614A7A5F20EC9DFA007C5ADA /* TMSwipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 614A7A5E20EC9DFA007C5ADA /* TMSwipeCell.m */; };
 		61650D8E2146B03E009B60A9 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61650D8C2146B03E009B60A9 /* TestTableViewCell.m */; };
 		61650D8F2146B03E009B60A9 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61650D8D2146B03E009B60A9 /* TestModel.m */; };
+		61650D942146BFE8009B60A9 /* TMExpandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61650D932146BFE8009B60A9 /* TMExpandViewController.m */; };
+		61650D972146C3AF009B60A9 /* TMExpandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61650D962146C3AF009B60A9 /* TMExpandModel.m */; };
+		61650D9B2146C80C009B60A9 /* TMCellTypeOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 61650D992146C80C009B60A9 /* TMCellTypeOne.m */; };
+		61650D9C2146C80C009B60A9 /* TMCellTypeOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61650D9A2146C80C009B60A9 /* TMCellTypeOne.xib */; };
+		61650DA02146C817009B60A9 /* TMExpandCellTypeOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 61650D9E2146C817009B60A9 /* TMExpandCellTypeOne.m */; };
+		61650DA12146C817009B60A9 /* TMExpandCellTypeOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61650D9F2146C817009B60A9 /* TMExpandCellTypeOne.xib */; };
 		61FDD86720EB9768004BADF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD86620EB9768004BADF5 /* AppDelegate.m */; };
 		61FDD86A20EB9768004BADF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FDD86920EB9768004BADF5 /* ViewController.m */; };
 		61FDD86D20EB9768004BADF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61FDD86B20EB9768004BADF5 /* Main.storyboard */; };
@@ -46,6 +52,16 @@
 		61650D8B2146B03E009B60A9 /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
 		61650D8C2146B03E009B60A9 /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
 		61650D8D2146B03E009B60A9 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		61650D922146BFE8009B60A9 /* TMExpandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMExpandViewController.h; sourceTree = "<group>"; };
+		61650D932146BFE8009B60A9 /* TMExpandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMExpandViewController.m; sourceTree = "<group>"; };
+		61650D952146C3AF009B60A9 /* TMExpandModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMExpandModel.h; sourceTree = "<group>"; };
+		61650D962146C3AF009B60A9 /* TMExpandModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMExpandModel.m; sourceTree = "<group>"; };
+		61650D982146C80C009B60A9 /* TMCellTypeOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMCellTypeOne.h; sourceTree = "<group>"; };
+		61650D992146C80C009B60A9 /* TMCellTypeOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMCellTypeOne.m; sourceTree = "<group>"; };
+		61650D9A2146C80C009B60A9 /* TMCellTypeOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TMCellTypeOne.xib; sourceTree = "<group>"; };
+		61650D9D2146C817009B60A9 /* TMExpandCellTypeOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMExpandCellTypeOne.h; sourceTree = "<group>"; };
+		61650D9E2146C817009B60A9 /* TMExpandCellTypeOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMExpandCellTypeOne.m; sourceTree = "<group>"; };
+		61650D9F2146C817009B60A9 /* TMExpandCellTypeOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TMExpandCellTypeOne.xib; sourceTree = "<group>"; };
 		61FDD86220EB9768004BADF5 /* TMSwipeCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMSwipeCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FDD86520EB9768004BADF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61FDD86620EB9768004BADF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +117,38 @@
 			path = SwipeCell;
 			sourceTree = "<group>";
 		};
+		61650D902146BF84009B60A9 /* SwipeCellDemo */ = {
+			isa = PBXGroup;
+			children = (
+				61650D8A2146B03E009B60A9 /* TestModel.h */,
+				61650D8D2146B03E009B60A9 /* TestModel.m */,
+				61650D8B2146B03E009B60A9 /* TestTableViewCell.h */,
+				61650D8C2146B03E009B60A9 /* TestTableViewCell.m */,
+				61FDD86820EB9768004BADF5 /* ViewController.h */,
+				61FDD86920EB9768004BADF5 /* ViewController.m */,
+				61FDD8A420EB9A9C004BADF5 /* TestViewController.h */,
+				61FDD8A520EB9A9C004BADF5 /* TestViewController.m */,
+			);
+			path = SwipeCellDemo;
+			sourceTree = "<group>";
+		};
+		61650D912146BFC5009B60A9 /* ExpandCellDemo */ = {
+			isa = PBXGroup;
+			children = (
+				61650D922146BFE8009B60A9 /* TMExpandViewController.h */,
+				61650D932146BFE8009B60A9 /* TMExpandViewController.m */,
+				61650D952146C3AF009B60A9 /* TMExpandModel.h */,
+				61650D962146C3AF009B60A9 /* TMExpandModel.m */,
+				61650D9D2146C817009B60A9 /* TMExpandCellTypeOne.h */,
+				61650D9E2146C817009B60A9 /* TMExpandCellTypeOne.m */,
+				61650D9F2146C817009B60A9 /* TMExpandCellTypeOne.xib */,
+				61650D982146C80C009B60A9 /* TMCellTypeOne.h */,
+				61650D992146C80C009B60A9 /* TMCellTypeOne.m */,
+				61650D9A2146C80C009B60A9 /* TMCellTypeOne.xib */,
+			);
+			path = ExpandCellDemo;
+			sourceTree = "<group>";
+		};
 		61FDD85920EB9768004BADF5 = {
 			isa = PBXGroup;
 			children = (
@@ -125,17 +173,11 @@
 		61FDD86420EB9768004BADF5 /* TMSwipeCell */ = {
 			isa = PBXGroup;
 			children = (
+				61650D912146BFC5009B60A9 /* ExpandCellDemo */,
+				61650D902146BF84009B60A9 /* SwipeCellDemo */,
 				61FDD8A720EBA267004BADF5 /* gif */,
-				61650D8A2146B03E009B60A9 /* TestModel.h */,
-				61650D8D2146B03E009B60A9 /* TestModel.m */,
-				61650D8B2146B03E009B60A9 /* TestTableViewCell.h */,
-				61650D8C2146B03E009B60A9 /* TestTableViewCell.m */,
 				61FDD86520EB9768004BADF5 /* AppDelegate.h */,
 				61FDD86620EB9768004BADF5 /* AppDelegate.m */,
-				61FDD86820EB9768004BADF5 /* ViewController.h */,
-				61FDD86920EB9768004BADF5 /* ViewController.m */,
-				61FDD8A420EB9A9C004BADF5 /* TestViewController.h */,
-				61FDD8A520EB9A9C004BADF5 /* TestViewController.m */,
 				61FDD86B20EB9768004BADF5 /* Main.storyboard */,
 				61FDD86E20EB976A004BADF5 /* Assets.xcassets */,
 				61FDD87020EB976A004BADF5 /* LaunchScreen.storyboard */,
@@ -275,9 +317,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				61FDD87220EB976A004BADF5 /* LaunchScreen.storyboard in Resources */,
+				61650DA12146C817009B60A9 /* TMExpandCellTypeOne.xib in Resources */,
 				61FDD8A920EBA270004BADF5 /* one.gif in Resources */,
 				61FDD86F20EB976A004BADF5 /* Assets.xcassets in Resources */,
 				61FDD86D20EB9768004BADF5 /* Main.storyboard in Resources */,
+				61650D9C2146C80C009B60A9 /* TMCellTypeOne.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,8 +347,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				61650D8E2146B03E009B60A9 /* TestTableViewCell.m in Sources */,
+				61650D9B2146C80C009B60A9 /* TMCellTypeOne.m in Sources */,
 				61FDD86A20EB9768004BADF5 /* ViewController.m in Sources */,
+				61650D972146C3AF009B60A9 /* TMExpandModel.m in Sources */,
+				61650DA02146C817009B60A9 /* TMExpandCellTypeOne.m in Sources */,
 				61FDD8A620EB9A9C004BADF5 /* TestViewController.m in Sources */,
+				61650D942146BFE8009B60A9 /* TMExpandViewController.m in Sources */,
 				61FDD87520EB976A004BADF5 /* main.m in Sources */,
 				61650D8F2146B03E009B60A9 /* TestModel.m in Sources */,
 				614A7A5F20EC9DFA007C5ADA /* TMSwipeCell.m in Sources */,

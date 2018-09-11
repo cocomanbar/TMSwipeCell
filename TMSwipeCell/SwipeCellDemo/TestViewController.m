@@ -8,7 +8,7 @@
 
 #import "TestViewController.h"
 #import "TestTableViewCell.h"
-
+#import "TMExpandViewController.h"
 
 @interface TestViewController ()
 <TMSwipeCellDelegate>
@@ -132,6 +132,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    TMExpandViewController *vc = [TMExpandViewController new];
+    vc.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
