@@ -48,7 +48,10 @@
  */
 - (BOOL)swipeCell:(TMSwipeCell *)swipeCell canSwipeRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return YES;
+    if (indexPath.row % 2 == 0) {
+        return YES;
+    }
+    return NO;
 }
 
 /**

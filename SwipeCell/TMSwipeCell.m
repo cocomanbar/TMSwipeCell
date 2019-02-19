@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, TMSwipeCellState) {
     TMSwipeCellStateOpen
 };
 
-@interface TMSwipeCell () <UIGestureRecognizerDelegate>
+@interface TMSwipeCell () <UIGestureRecognizerDelegate, UITableViewDelegate>
 @property (nonatomic, assign) BOOL sideslip;
 @property (nonatomic, assign) TMSwipeCellState state;
 @end
@@ -105,10 +105,8 @@ typedef NS_ENUM(NSInteger, TMSwipeCellState) {
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     if (gestureRecognizer == _panGesture) {
-        // 若 tableView 不能滚动时, 还触发手势, 则隐藏侧滑
-        if (!self.tableView.scrollEnabled) {
+        if (self.sideslip) {
             [self hiddenAllSideslip];
-            return NO;
         }
         UIPanGestureRecognizer *gesture = (UIPanGestureRecognizer *)gestureRecognizer;
         CGPoint translation = [gesture translationInView:gesture.view];
@@ -340,19 +338,14 @@ typedef NS_ENUM(NSInteger, TMSwipeCellState) {
     _state = state;
     
     if (state == TMSwipeCellStateNormal) {
-        self.tableView.scrollEnabled = YES;
-        self.tableView.allowsSelection = YES;
         for (TMSwipeCell *cell in self.tableView.visibleCells) {
             if ([cell isKindOfClass:TMSwipeCell.class]) {
                 cell.sideslip = NO;
             }
         }
-        
     } else if (state == TMSwipeCellStateAnimating) {
-        
+        NSLog(@"----->>%@", self);
     } else if (state == TMSwipeCellStateOpen) {
-        self.tableView.scrollEnabled = NO;
-        self.tableView.allowsSelection = NO;
         for (TMSwipeCell *cell in self.tableView.visibleCells) {
             if ([cell isKindOfClass:TMSwipeCell.class]) {
                 cell.sideslip = YES;
@@ -378,11 +371,13 @@ typedef NS_ENUM(NSInteger, TMSwipeCellState) {
 - (NSIndexPath *)indexPath {
     return [self.tableView indexPathForCell:self];
 }
+
 @end
 
 #pragma mark - UITableView (TMSwipeCell)
 
 @implementation UITableView (TMSwipeCell)
+
 - (void)hiddenAllSideslip {
     for (TMSwipeCell *cell in self.visibleCells) {
         if ([cell isKindOfClass:TMSwipeCell.class]) {
@@ -390,6 +385,8 @@ typedef NS_ENUM(NSInteger, TMSwipeCellState) {
         }
     }
 }
+
+
 @end
 
 
